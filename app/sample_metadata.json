@@ -1,0 +1,126 @@
+{
+    "visium": {
+        "brain": {
+            "aged": [
+                "VLP40_1C.pkl",
+                "VLP40_1D.pkl",
+                "VLP41_1B.pkl",
+                "VLP41_1D.pkl"
+            ],
+            "young": [
+                "VLP40_1A.pkl",
+                "VLP41_1A.pkl",
+                "VLP40_1B.pkl",
+                "VLP41_1C.pkl"
+            ]
+        },
+        "heart": {
+            "aged": [
+                "VLP42_heart_A1.pkl",
+                "VLP42_heart_D1.pkl"
+            ],
+            "young": [
+                "VLP42_heart_B1.pkl",
+                "VLP42_heart_C1.pkl"
+            ]
+        },
+        "kidney": {
+            "aged": [
+                "VLP43_kidney_C1.pkl",
+                "VLP43_kidney_D1.pkl"
+            ],
+            "young": [
+                "VLP43_kidney_A1.pkl",
+                "VLP43_kidney_B1.pkl"
+            ]
+        },
+        "liver": {
+            "aged": [
+                "OPmLiverA1.pkl",
+                "OPmLiverA2.pkl",
+                "OPmLiverA3.pkl",
+                "OPmLiverA5.pkl",
+                "OPmLiverA6.pkl"
+            ],
+            "young": [
+                "OPmLiverY1.pkl",
+                "OPmLiverY2.pkl",
+                "OPmLiverY3.pkl",
+                "OPmLiverY4.pkl",
+                "OPmLiverY5.pkl"
+            ]
+        },
+        "spleen": {
+            "aged": [
+                "OPmSpleenA1.pkl",
+                "OPmSpleenA2.pkl",
+                "OPmSpleenA3.pkl",
+                "OPmSpleenA4.pkl",
+                "OPmSpleenA5.pkl",
+                "OPmSpleenA6.pkl"
+            ],
+            "young": [
+                "OPmSpleenY1.pkl",
+                "OPmSpleenY2.pkl",
+                "OPmSpleenY3.pkl",
+                "OPmSpleenY4.pkl"
+            ]
+        }
+    },
+    "stomics": {
+        "brain": {
+            "aged": [
+                "Brain_A1.pkl",
+                "Brain_A4.pkl"
+            ],
+            "young": [
+                "Brain_Y1.pkl",
+                "Brain_Y4.pkl"
+            ]
+        },
+        "heart": {
+            "aged": [
+                "Heart_A1.pkl",
+                "Heart_A7.pkl"
+            ],
+            "young": [
+                "Heart_Y1.pkl",
+                "Heart_Y4.pkl"
+            ]
+        },
+        "kidney": {
+            "aged": [
+                "Kidney_A4.pkl",
+                "Kidney_A8.pkl"
+            ],
+            "young": [
+                "Kidney_Y2.pkl",
+                "Kidney_Y4.pkl"
+            ]
+        },
+        "liver": {
+            "aged": [
+                "Liver_A1_2.pkl",
+                "Liver_A3_2.pkl",
+                "Liver_A4_2.pkl"
+            ],
+            "young": [
+                "Liver_A1_1.pkl",
+                "Liver_A3_1.pkl",
+                "Liver_A4_1.pkl"
+            ]
+        },
+        "spleen": {
+            "aged": [
+                "Spleen_A2_1.pkl",
+                "Spleen_A3_2.pkl",
+                "Spleen_A4_1.pkl"
+            ],
+            "young": [
+                "Spleen_A2_2.pkl",
+                "Spleen_A3_1.pkl",
+                "Spleen_A4_2.pkl"
+            ]
+        }
+    }
+}
