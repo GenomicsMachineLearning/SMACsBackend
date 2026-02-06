@@ -1,4 +1,4 @@
-import pickle
+import anndata
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -17,9 +17,8 @@ def _fig_to_base64(fig):
 
 def plot_visium_brain(file_path, feature):
     try:
-        with open(file_path, "rb") as f:
-            data1 = pickle.load(f)
-            
+        data1 = anndata.read_h5ad(file_path)
+
         fig = plt.figure(figsize=(5,5))
         
         # Determine Image key (safe first key)
@@ -64,9 +63,8 @@ def plot_visium_brain(file_path, feature):
 
 def plot_stomics_brain(file_path, feature):
     try:
-        with open(file_path, "rb") as f:
-            data = pickle.load(f)
-            
+        data = anndata.read_h5ad(file_path)
+
         fig = plt.figure(figsize=(5,5))
         
         # Plot Data Logic

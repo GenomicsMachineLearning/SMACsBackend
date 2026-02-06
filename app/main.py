@@ -1,9 +1,10 @@
 import fastapi
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import router as api_router
+from app.core.config import settings
 
 app = fastapi.FastAPI(
-    title="SMACs Backend",
+    title=settings.PROJECT_NAME,
     description="Backend for SMACs (Cell-Cell Interactions in Aging)",
     version="1.0.0"
 )
@@ -11,7 +12,7 @@ app = fastapi.FastAPI(
 # CORS Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all for now as per pilot setup
+    allow_origins=settings.ALLOWED_HOSTS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
