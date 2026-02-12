@@ -51,7 +51,7 @@ class Settings(BaseSettings):
     def DATA_STORAGE_PATH(self) -> pathlib.Path:
         if self.ENVIRONMENT == "production":
             return pathlib.Path("/mnt/data")
-        return self.DATA_STORAGE_PATH #return pathlib.Path("./data")
+        return pathlib.Path("./data")
 
     @property
     def LR_DB_PATH(self) -> pathlib.Path:
