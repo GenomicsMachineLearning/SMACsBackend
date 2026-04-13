@@ -1,6 +1,7 @@
 import fastapi
 from fastapi.middleware.cors import CORSMiddleware
 from app.api import router as api_router
+from app.search_api import router as search_router
 from app.core.config import settings
 
 app = fastapi.FastAPI(
@@ -19,6 +20,7 @@ app.add_middleware(
 )
 
 app.include_router(api_router, tags=["api"])
+app.include_router(search_router, tags=["search"])
 
 @app.get("/")
 async def root():
