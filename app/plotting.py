@@ -32,9 +32,9 @@ def _png_to_base64(png_bytes):
     return f"data:image/png;base64,{image_base64}"
 
 
-def _write_to_cache(png_bytes: bytes):
-    settings.CACHE_PATH.mkdir(exist_ok=True, parents=True)
-    settings.CACHE_PATH.write_bytes(png_bytes)
+def _write_to_cache(cache_path: Path, png_bytes: bytes):
+    cache_path.parent.mkdir(exist_ok=True, parents=True)
+    cache_path.write_bytes(png_bytes)
 
 
 def plot_visium(file_path, feature):
@@ -85,7 +85,7 @@ def plot_visium(file_path, feature):
 
         # Create PNG, write to cache, base64 encode
         png_bytes = _create_png(fig)
-        _write_to_cache(png_bytes)
+        _write_to_cache(cache_path, png_bytes)
         return _png_to_base64(png_bytes)
     except Exception as e:
         print(f"Error in plotting Visium for {file_path}: {e}")
