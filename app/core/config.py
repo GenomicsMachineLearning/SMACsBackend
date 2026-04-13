@@ -54,6 +54,10 @@ class Settings(BaseSettings):
         return pathlib.Path("./data")
 
     @property
+    def CACHE_PATH(self) -> pathlib.Path:
+        return (self.DATA_STORAGE_PATH / "plot_cache")
+
+    @property
     def LR_DB_PATH(self) -> pathlib.Path:
         return self.DATA_STORAGE_PATH / self.LR_DB_FILE
 

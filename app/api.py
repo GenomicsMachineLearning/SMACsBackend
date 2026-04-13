@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import Response
 
 from app.core.config import settings
-from app.plotting import plot_visium_brain, plot_stomics_brain
+from app.plotting import plot_visium, plot_stomics
 from app.metadata import MetadataService
 import pandas as pd
 import os
@@ -93,9 +93,9 @@ async def get_plot(
         # 2. Logic to choose plotter
         plot_func = None
         if technology.lower() == "visium":
-            plot_func = plot_visium_brain
+            plot_func = plot_visium
         elif technology.lower() == "stomics":
-            plot_func = plot_stomics_brain
+            plot_func = plot_stomics
         else:
             raise HTTPException(status_code=400,
                                 detail=f"Technology '{technology}' not supported.")
