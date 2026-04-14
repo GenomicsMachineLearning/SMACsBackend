@@ -33,6 +33,7 @@ def _png_to_base64(png_bytes):
 
 
 def _write_to_cache(cache_path: Path, png_bytes: bytes):
+    cache_path.parent.mkdir(exist_ok=True, parents=True)
     cache_path.write_bytes(png_bytes)
 
 
