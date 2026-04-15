@@ -103,8 +103,8 @@ def plot_stomics(file_path, feature):
         fig = plt.figure(figsize=(5, 5))
 
         # Plot Data Logic
-        x_coords = data.obs["imagecol"]
-        y_coords = -data.obs["imagerow"]
+        x_coords = data.obs["imagecol"].astype('int32')
+        y_coords = -data.obs["imagerow"].astype('int32')
         values = None
 
         if feature in data.var_names:
